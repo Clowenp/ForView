@@ -40,6 +40,10 @@ def practicePage():
     trans = translateText(question)
     return render_template("practicePage.html", question=question + trans)
 
+@app.route("/results")
+def resultsPage():
+    return render_template("results.html")
+
 @app.route("/receive", methods=['post'])
 def recieve():
     files = request.files

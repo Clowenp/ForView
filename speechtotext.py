@@ -7,16 +7,16 @@ from grammar import grammar_check
 
 def speech_to_text_func():
 
-    video_name = "1"
+    video_name = "static/videos/1"
 
-    command2wav = f"ffmpeg -i {video_name}.mp4 {video_name}.wav"
-
+    command2wav = f"ffmpeg -i {video_name}.mp4 -ab 160k -ac 2 -ar 44100 -vn {video_name}.wav"
     os.system(command2wav)
+    
 
     r = sr.Recognizer()
-    with sr.AudioFile(f"{video_name}.wav") as source:
-        audio = r.record(source, duration=120) 
-    print(r.recognize_google(audio))
+    with sr.AudioFile(video_name+".wav") as source:
+        audio = r.record(source) 
+    r.recognize_google(audio)
 
     AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), f"{video_name}.wav")
 

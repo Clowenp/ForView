@@ -70,6 +70,7 @@ window.onload = function() {
                 })
                 .catch(err => alert(err));
 
+                window.location.href = "http://localhost:5000/results"
                 
             }
         }
