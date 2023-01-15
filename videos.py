@@ -1,5 +1,5 @@
 """
-videos.py - reads from and writes to JSON file of interview questions for later use
+videos.py - reads from and writes to JSON file of information on user's videos for later use
 (Alex Chen)
 """
 # Import modules
