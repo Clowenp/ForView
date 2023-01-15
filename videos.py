@@ -39,7 +39,7 @@ def readVideo(qID: int):
     the database.
     :param qID: ID assigned to each video entry in the JSON; increments from 1, and should be an integer.
     """
-    database = readFile(f"static/videos/userHistory.json")
+    database = readFile(f"userHistory.json")
 
     if database == []:
         print("Debug: Nothing in file.")
@@ -59,7 +59,7 @@ def writeVideo(filename: str, qID: str, score: str, transcript: str):
     """
     Placeholder description
     """
-    database = readFile(f"static/videos/userHistory.json")
+    database = readFile(f"userHistory.json")
 
     # Increment number of videos, then add info as a dict into "Entries" key
     info = {
@@ -78,7 +78,7 @@ def writeVideo(filename: str, qID: str, score: str, transcript: str):
         print(database)
         database.sort(key=(lambda video : video["ID"])) 
 
-    writeFile(database, f"static/videos/userHistory.json")
+    writeFile(database, f"userHistory.json")
     print("Write Video Test Success")
 
 # Unused, due to change in plans
@@ -106,7 +106,7 @@ def deleteVideo(qID : int):
     """
     Placeholder
     """  
-    database = readFile(f"static/videos/userHistory.json")
+    database = readFile(f"userHistory.json")
 
     try:
         index = binVideoSearch(database, 0, len(database) - 1, qID)
@@ -115,7 +115,7 @@ def deleteVideo(qID : int):
         print("Debug: no video to delete")
         pass
 
-    writeFile(database, f"static/videos/userHistory.json")
+    writeFile(database, f"userHistory.json")
     print("Delete video success")    
 
 

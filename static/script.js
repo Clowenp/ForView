@@ -9,11 +9,12 @@ function timer() {
 
 function getFileName() {
     const date = new Date();
-    return (date.getMonth()+1).toString().padStart(2, 0) + "-" +
-            date.getDate().toString().padStart(2, 0) + "-" +
-            date.getHours().toString().padStart(2, 0) + "-" +
-            date.getMinutes().toString().padStart(2, 0) + "-" +
-            date.getSeconds().toString().padStart(2, 0);
+    return "1"
+            // (date.getMonth()+1).toString().padStart(2, 0) + "-" +
+            // date.getDate().toString().padStart(2, 0) + "-" +
+            // date.getHours().toString().padStart(2, 0) + "-" +
+            // date.getMinutes().toString().padStart(2, 0) + "-" +
+            // date.getSeconds().toString().padStart(2, 0);
 }
 
 
@@ -70,6 +71,8 @@ window.onload = function() {
                     body: stringJSON
                 })
                 .catch(err => alert(err));
+
+                
             }
         }
     })

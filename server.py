@@ -40,7 +40,7 @@ def recieve():
     file = files['file']
     filename = file.filename
 
-    with open("static/videos/"+filename, 'wb') as f:
+    with open(filename, 'wb') as f:
         f.write(file.read())
 
     response = jsonify("File received and saved!")
@@ -52,7 +52,7 @@ def recieve():
 def update():
     message = json.loads(request.data, strict=False)
 
-    file = 'static/videos/userHistory.json'
+    file = 'userHistory.json'
     listObj = []
 
     with open(file) as fp:
