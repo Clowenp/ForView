@@ -11,8 +11,23 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("videoList.html")
+    return render_template("index.html")
 
+@app.route("/practice")
+def practice():
+    return render_template("practice.html")
+
+@app.route("/progress")
+def progress():
+    return render_template("progress.html")
+
+@app.route("/signup")
+def signup():
+    return render_template("signup.html")
+
+@app.route("/practicePage")
+def practicePage():
+    return render_template("practicePage.html")
 
 @app.route("/receive", methods=['post'])
 def recieve():

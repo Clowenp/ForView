@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interview Prep Site</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/styles.css') }}"/>
     <!-- Changes font of text in the navigation bar-->
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav class="navbar">
     <div class="navbar__container">
-        <a href="/" id="navbar__logo">AJOA</a>
+        <a href="/" id="navbar__logo">ForView</a>
         <div class="navbar__toggle" id="mobile-menu"></div>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -23,13 +23,13 @@
             <a href="/" class="navbar__links">Home</a>
         </li>
         <li class="navbar__item">
-            <a href="/progress.html" class="navbar__links">Practice</a>
+            <a href="/practice" class="navbar__links">Practice</a>
         </li>
         <li class="navbar__item">
-            <a href="/" class="navbar__links">Progress</a>
+            <a href="/progress" class="navbar__links">Progress</a>
         </li>
         <li class="navbar__btn">
-            <a href="/" class="button">Sign Up</a>
+            <a href="/signup" class="button">Sign Up</a>
         </li>
     </ul>
   </nav>
@@ -39,16 +39,15 @@
   <div class="main">
     <div class="main__container">
         <div class="main__content">
-            <h1>Check your progress.</h1>
+            <h1>Put your skills to the test</h1>
             <!--
             <h2>GROUP</h2>
             <p>Enhance Your Interview Skills.</p> -->
-            <button class="main__btn"><a href="/">Click to Start</
-                a></button>
+            <button class="main__btn"><a href="/practicePage">Click to Start</a></button>
         </div>
         <div class="main__img--container">
             <!--specifies location of the url-->
-            <img src="images/pic2.svg" alt="pic" id="main__">
+            <img src=" {{ url_for('static', filename='images/pic2.svg') }}" alt="pic" id="main__">
         </div>
     </div>
   </div>

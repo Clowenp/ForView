@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Prep Site</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/styles.css') }}"/>
+    <!-- Changes font of text in the navigation bar-->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">ForView</a>
+        <div class="navbar__toggle" id="mobile-menu"></div>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+        <li class="navbar__item">
+            <a href="/" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/practice" class="navbar__links">Practice</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/progress" class="navbar__links">Progress</a>
+        </li>
+        <li class="navbar__btn">
+            <a href="/signup." class="button">Sign Up</a>
+        </li>
+    </ul>
+  </nav>
+
+
+<!-- Hero Section-->
+  <div class="main">
+    <style>
+      .body {
+        background-color: black;
+      }
+      .main {
+        background-color: black;
+      }
+
+      .main_container {
+        background-color: #424242;
+        overflow:hidden;
+        width: 100%;
+      }
+
+      .question {
+        text-align: center;
+        font-size: 25px;
+        color: #dedcdc;
+      }
+
+      .practice_content video {
+        height: 150; 
+        width: 60%;
+        float: left;
+        margin-left: 10px;
+      }
+
+      .practice_content button  {
+        appearance: button;
+        backface-visibility: hidden;
+        background-color: #405cf5;
+        border-radius: 6px;
+        border-width: 0;
+        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+        font-size: 100%;
+        height: 44px;
+        line-height: 1.15;
+        margin: 12px 0 0;
+        outline: none;
+        overflow: hidden;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        text-transform: none;
+        transform: translateZ(0);
+        transition: all .2s,box-shadow .08s ease-in;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .practice_content:buttondisabled {
+        cursor: default;
+      }
+
+      .practice_content:buttonfocus {
+        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+      }
+
+    </style>
+    <div class="main_container">
+        <div class="practice_content">
+            <div class ="question">
+              <br>
+              <h3>Question: </h3>
+            </div>
+            <br><br><br>
+            <video muted id = "video" autoplay></video>
+            <button id = "record_button">RECORD</button>
+            
+            <p id="timer">0 m 0 s</p>
+            <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+        </div>
+        </div>
+    </div>
+  </div>
+
+    
+
+    <script src="app.js"></script>
+  </body>
+</html>
