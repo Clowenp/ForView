@@ -1,0 +1,623 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+   }
+   
+   .navbar {
+       background: #2a73c6;
+       height: 80px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 1.2rem;
+       position: sticky;
+       top: 0;
+       z-index: 999;
+   }
+   
+   .navbar__container {
+       display: flex;
+       justify-content: space-between;
+       height: 80px;
+       z-index: 1;
+       width: 100%;
+       max-width: 1300px;
+       margin: 0 auto;
+       padding: 0 50px;
+   }
+   
+   #navbar__logo {
+       background-color: #ff8177;
+       background-image: linear-gradient(to top, #ff0844 0%, #ffb199, 
+       100%);
+       background-size: 100%;
+       -webkit-background-clip: text;
+       -moz-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       -moz-text-fill-color: transparent;
+       display: flex;
+       align-items: center;
+       cursor: pointer;
+       text-decoration: none;
+       font-size: 2rem;
+   }
+   
+   .fa-gem {
+       margin-right: 0.5rem;
+   }
+   
+   .navbar__menu {
+       display: flex;
+       align-items: center;
+       list-style: none;
+       text-align: center;
+   }
+   
+   .navbar__item {
+       height: 80px;
+   }
+   
+   .navbar__links {
+       color: #fff;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       text-decoration: none;
+       padding: 0 1rem;
+       height: 100%;
+   }
+   
+   .navbar__btn {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 0 1rem;
+       width: 100%;
+   }
+   
+   .button {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       text-decoration: none;
+       padding: 10px 20px;
+       height: 100%;
+       width: 100%;
+       border: none;
+       outline: none;
+       border-radius: 4px;
+       background: #f77062;
+       color: #fff;
+   }
+   /*This changes the colour of the button when you hover over it*/
+   .button:hover {
+       background: #4B37ff;
+       transition: all 0.3s ease;
+   }
+   
+   .navbar__links:hover{
+       color: #f77062;
+       transition: all 0.3s ease;
+   }
+   /* Controls the dimensions of the site when used on a mobile screen*/
+   @media screen and (max-width: 960px) {
+       .navbar__container {
+           display: flex;
+           justify-content: space-between;
+           height: 80px;
+           z-index: 1;
+           width: 100%;
+           max-width: 1300px;
+           padding: 0;
+       }
+   
+       .navbar__menu{
+           display: grid;
+           grid-template-columns: auto;
+           margin: 0;
+           width: 100%;
+           position: absolute;
+           /*top: -1000px;
+           opacity: 0; */
+           transition: all 0..5s ease;
+           height: 50vh;
+           z-index: -1;
+           background: #340f89;
+       }
+   /* This makes the menu nav bar active & motile*/
+       .navbar__menu.active {
+           background: #340f89;
+           top: 100%;
+           opacity: 1;
+           transition: all 0.5s ease;
+           z-index: 99;
+           height: 50vh;
+           font-size: 1.6rem;
+       }
+   
+       #navbar__logo {
+           padding-left: 25px;
+       }
+   /* This customizes the toggle feature in the nav bar*/
+       .navbar__toggle.bar {
+           width: 25px;
+           height: 3px;
+           margin: 5px auto;
+           transition: all 0.3s ease-in-out;
+           background: rgb(177, 194, 28);
+       }
+   
+       .navbar__item {
+           width: 100%;   
+       }
+   
+       .navbar__links {
+           text-align: center;
+           padding: 2rem;
+           width: 100%;
+           display: table;
+       }
+   
+       #mobile-menu {
+           position: absolute;
+           top: 20%;
+           right: 5%;
+           transform: translate(5%, 20%);
+       }
+   
+       .navbar__btn {
+           padding-bottom: 2rem;
+       }
+   
+       .button {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           width: 80%;
+           height: 80px;
+           margin: 0;
+       }
+   
+       /* does not work :( */
+       .navbar__toggle .bar {
+           display: block;
+           cursor: pointer;
+       }
+   /*animates the menu in the mobile web version */
+       #mobile-menu.is-active .bar:nth-child(2) {
+           opacity: 1;
+       }
+   /*specifies the top bar of the hamburger menu */
+       #mobile-menu.is-active .bar:nth-child(1) {
+           transform: translateY(8px); rotate: (45deg);
+       }
+   /* 3rd bar of the hamburger menu */
+       #mobile-menu.is-active .bar:nth-child(3) {
+           transform: translateY(8px); rotate: (45deg);
+       }    
+   }
+   
+   /* Hero Section Css */
+   .main {
+       
+       background-color: #e60f89;
+   }
+   
+   .main__container{
+       /* Changes the background colour of the hero section */
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       align-items: center;
+       justify-self: center;
+       margin: 0 auto;
+       height: 90vh;
+       background-color: #b9b9b9;
+       z-index: 1;
+       width: 100%;
+       max-width: 1300px;
+       padding: 0 50px
+   }
+   
+   .main__content h1 {
+       font-size: 2rem;
+       background-color: #ff8177;
+       background-image: linear-gradient(to top, #360814 0%, #ffb199 
+       100%);
+       background-size: 100%;
+       -webkit-background-clip: text;
+       -moz-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       -moz-text-fill-color:transparent;
+   }
+   
+   .main__content h2 {
+       font-size: 4rem;
+       background-color: #ff8177;
+       /* Customizes the 2nd part of the text; the word, Group */
+       background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 
+       100%);
+       background-size: 100%;
+       -webkit-background-clip: text;
+       -moz-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       -moz-text-fill-color:transparent;
+   }
+   
+   .main__content p {
+       margin-top: 1rem;
+       font-size: 2rem;
+       font-weight: 700;
+       color: #fff;
+   }
+   
+   /* Customizes the Click to start button and adds a border with colour */
+   .main__btn {
+       font-size: 1rem;
+       background-image: linear-gradient(to top, #5b2ac5 0%, #7241b3 
+       100%);
+       padding: 14px 32px;
+       border: none;
+       border-radius: 4px;
+       color: #fff;
+       margin-top: 2rem;
+       cursor: pointer;
+       position: relative;
+       transition: all 0.35s;
+       outline: none;
+   }
+   
+   /* Creates a maximizing effect on the button and eliminates the underline on the word in the button*/
+   .main__btn a {
+       position: relative;
+       z-index: 2;
+       color: #fff;
+       text-decoration: none;
+   
+   }
+   
+   .main__btn:after {
+       position: absolute;
+       /* Make content an empty string so when you hover over button nothing is showing except the colour */
+       content: '';
+       top: 0;
+       left: 0;
+       width: 0;
+       height: 100%;
+       background: #4B37ff;
+       transition: all 0.35s;
+       border-radius: 4px;
+   }
+   
+   /* Creates a hover-sliding-fill effect on the button and eliminates the underline on the word in the button*/
+   .main__btn:hover {
+       color: #fff;
+      /* width: 100%; */
+   }
+   
+   .main__btn:hover::after {
+       width: 100%;
+   }
+   
+   .main__img--container {
+       text-align: center;
+   }
+   
+   /* sets measurements/dimensions for the main background on home page*/
+   #main__img {
+       height: 80%;
+       width: 80%;
+   }
+   
+   /* Creates a mobile-responsive feature*/
+   @media screen and (max-width: 760px) {
+       .main__container{
+           display: grid;
+           grid-template-columns: auto;
+           align-items: center;
+           justify-self: center;
+           width: 100%;
+           margin: 0 auto;
+           /* vh = viewpoint height*/
+           height: 90vh;
+       }
+       
+       .main__content {
+           text-align: center;
+           margin-bottom: 4rem;
+       }
+   
+       .main__content h1 {
+           font-size: 2.5rem;
+           margin-top: 2rem;
+       }
+   
+       .main__content h2 {
+           font-size: 3rem;
+       }
+   
+       .maint__content p {
+           margin-top: 1rem;
+           font-size: 1.5rem;
+       }
+   }
+   
+   /* For the smaller screens*/
+   @media screen and (max-width: 400px) {
+       .main__content h1 {
+           font-size: 2rem;
+           margin-top: 3rem;
+       }
+   
+       .main__content h2 {
+           font-size: 2rem;
+       }
+   
+       .maint__content p {
+           margin-top: 2rem;
+           font-size: 1.5rem;
+       }
+   }
+   
+   .main__btn {
+       padding: 12px 36px;
+       margin: 2.5rem 0;
+   }
+   
+   /* Features Section CSS (Added by Alex)*/
+   .features {
+       background: #141414;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       height: 150vh;
+   }
+   
+   .features h1 {
+       background-color: #ff8177;
+   
+       text-align: center;
+       background-image: linear-gradient(to right, #ff8177 0%,
+       #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%,
+       #b12a5b 100%);
+   
+       background-size: 100%;
+       margin-top: 7rem;
+       margin-bottom: 8rem;
+       font-size: 2.5rem;
+       -webkit-background-clip: text;
+       -moz-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       -moz-text-fill-color:transparent;
+   }
+   
+   .features_container {
+       display: flex;
+       width: auto;
+       height: 700px;
+       width: 1280px;
+       padding-left: 10%;
+       padding-right: 10%;
+       flex-direction: row;
+       align-items: center;
+       height: 60vh;
+   }
+   
+   .features_card {
+       height: 400px;
+       width: 300px;
+       background: rgba(73, 73, 73, 0.6);
+       color: #FFFFFF;
+       margin-right: 2%;
+       margin-left: 2%;
+       position: relative;
+       /* background: #494949; */
+       background-image: linear-gradient(to bottom, 
+           rgb(60, 118, 184) 60%, 
+           rgba(39, 111, 194, 0.6) 100%);
+       border-radius: 8px;
+       transition: width 2s, height 2s;
+       transition-timing-function: ease;
+   }
+   
+   .features_card.hover {
+       width: 325px;
+       height: 425px;
+   }
+   
+   .features_card h3 {
+       /* color: #FFFFFF; */
+       top: 350px;
+       padding-top: 50px;
+       padding-bottom: 25px;
+       padding-left: 30px;
+       padding-right: 30px;
+       text-align: center
+   }
+   
+   .features_card p {
+       /* color: #FFFFFF; */
+       padding-left: 30px;
+       padding-right: 30px;
+       top: 40px;
+       text-align: center;
+   }
+   
+   /* Services Section CSS */
+   .services {
+       background: #141414;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       height: 100vh;
+   }
+   
+   /customization or 
+   service section title box customization Adds boxes to the start now mini buttons
+   and links it to the home page.*/
+   
+   .services h1 {
+       background-color: #ff8177;
+       background-image: linear-gradient(to right, #ff8177 0%,
+       #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%,
+       #b12a5b 100%);
+   
+   /* Customizes the text*/
+   
+       background-size: 100%;
+       margin-bottom: 5rem;
+       font-size: 2.5rem;
+       -webkit-background-clip: text;
+       -moz-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       -moz-text-fill-color:transparent;
+   }
+   
+   /* Centers the text that's at the bottom to be int he middle */
+   .services_container {
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+   }
+   
+   /* Linear gradient to make background of card lighter*/
+   .services__card {
+       margin: 1rem;
+       height: 525px;
+       width: 400px;
+       border-radius: 4px;
+       background-image: linear-gradient(to bottom, 
+           rgba(0,0,0,0) 0%, 
+           rgba(17, 17, 17, 0.6) 100%),
+           url('/images/boyslaptop1.jpg');
+       background-size: cover;
+       position: relative;
+       color: #fff
+   }
+   
+   .services__card:nth-child(2) {
+       background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, 
+       rgba(17, 17, 17, 0.6) 100%), url('/images/girllaptop1.avif');   
+   }
+   
+   .services h2 {
+       position: absolute;
+   
+   }
+   
+   /* setting the dimensions of the photos at bottom of page */
+   .services__card p {
+       position: absolute;
+       top: 400px;
+       left: 30px;
+   }
+   
+   /* Start now buttons at the bottom*/
+   
+   .services__card button{
+       color: #fff;
+       padding: 10px 20px;
+       border: none;
+       outline: none;
+       border-radius: 4px;
+       background: #f77062;
+       position: absolute;
+       top: 440px;
+       left: 30px;
+       font-size: 1rem;
+       cursor: pointer;
+   }
+   
+   /* Adding hover effect*/
+   
+   /* Increases size*/
+   .services__card:hover {
+       transform: scale(1.075);
+       transition: 0.2s ease-in;
+       cursor: pointer;
+   }
+   
+   @media screen and (max-width: 960px) {
+       .services {
+           height: 1600px;
+       }
+   
+       .services h1 {
+           font-size: 2rem;
+           margin-top: 12rem;
+       }
+   }
+   
+   @media screen and (max-width: 480px) {
+       .services {
+           height: 1400px;
+       }
+   
+       .services h1 {
+           font-size: 1.2rem;
+       }
+   
+       .services__card {
+           width: 300px;
+       }
+   }
+   
+   /* Footer in CSS */
+   .footer__container {
+       background-color: #141414;
+       padding: 5rem 0;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   #footer__logo{
+       color: #fff;
+       display: flex;
+       align-items: center;
+       cursor: pointer;
+       text-decoration: none;
+       font-size: 2rem;
+   }
+   
+   .footer__links {
+       width: 100%;
+       max-width: 1000px;
+       display: flex;
+       justify-content: center;
+   }
+   
+   .footer__link--wrapper {
+       display: flex;
+   }
+   
+   .footer__link--items {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       margin: 16px;
+       text-align: left;
+       width: 160px;
+       box-sizing: border-box;
+   }
+   
+   .footer__link--items h2 {
+       margin-bottom: 16px;
+   }
+   
+   .footer__link--items > h2 {
+       color: #fff;
+   }
+   
+   .footer__link--items a {
+       color: #fff;
+       text-decoration: none;
+       margin-bottom: 0.5rem;
+   }
+   
+   .footer__link--items a:hover {
+       color: #e9e9e9;
+       transition: 0.3s ease-out;
+   }
