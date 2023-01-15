@@ -14,7 +14,7 @@ def readFile(filename : str = "questions.json"):
     """
     # Read JSON file
     try:
-        with open("questions.json", 'r') as fh:
+        with open(filename, 'r') as fh:
             reader = fh.read()
             database = json.loads(reader)
     except FileNotFoundError:
