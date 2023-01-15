@@ -22,11 +22,11 @@ Created by [Aaron Jumarang](https://github.com/aaronjuma), [Owen Pan](https://gi
 - [ ] Implementation of more languages to translate text
 
 ## Required Dependancies/Packages:
-- Python:
-  1. speech_recognition
-  2. translate
-  3. flask
-  4. pydub
-  5. ffmpeg
+For Python:
+  1. ```speech_recognition```
+  2. ```translate```
+  3. ```flask```
+  4. ```pydub```
+  5. ```ffmpeg```
 <!--  Add on more if necessary  -->
 
