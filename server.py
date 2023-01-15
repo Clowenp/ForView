@@ -9,6 +9,7 @@ import json
 
 from videos import readVideo
 from questions import readQuestion, readSeenQuestions
+from translator import translateText
 
 app = Flask(__name__)
 
@@ -36,7 +37,8 @@ def videoList():
 def practicePage():
     info = readQuestion()
     question = [i for i in info.values()][0]
-    return render_template("practicePage.html", question=question)
+    trans = translateText(question)
+    return render_template("practicePage.html", question=question + trans)
 
 @app.route("/receive", methods=['post'])
 def recieve():

@@ -12,11 +12,3 @@ def translateText(text : str, language : str = "zh") -> str:
     translation = translator.translate(text)
     
     return translation
-
-
-def main():
-    test1 = translateText("I am a flying parrot.", "zh")
-    print(test1)
-
-if __name__ == "__main__":
-    main()
