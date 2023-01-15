@@ -4,16 +4,8 @@ getQuestion.py - reads from and writes to JSON file of interview questions for l
 """
 
 # Import packages
-import requests   # Might not use
-import selenium
 import json
 import random as rd
-from bs4 import BeautifulSoup
-
-# Exception for if there are no more unseen questions available to choose from     # NOT USED
-# class NoRandQuestionLeft(Exception):
-#     pass
-
 
 def readFile(filename : str = "questions.json"):
     """
