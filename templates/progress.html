@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForView Interview Prep</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/styles.css') }}"/>
+    <!-- Changes font of text in the navigation bar-->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">ForView</a>
+        <div class="navbar__toggle" id="mobile-menu"></div>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+        <li class="navbar__item">
+            <a href="/" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/practice" class="navbar__links">Practice</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/progress" class="navbar__links">Progress</a>
+        </li>
+    </ul>
+  </nav>
+
+
+<!-- Hero Section-->
+  <div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>VIEW VIDEOS</h1>
+        </div>
+    </div>
+  </div>
+
+  <ul id="listVid">
+    <script>
+        var request = new XMLHttpRequest();
+        request.open("GET","static/userData.json", false);
+        request.send(null);
+        var jsonData = JSON.parse(request.responseText);
+
+        var request = new XMLHttpRequest();
+        request.open("GET", "static/videos/userHistory.json", false);
+        request.send(null);
+        var videosList = JSON.parse(request.responseText);
+        console.log(videosList[0].FILENAME);
+
+        console.log(jsonData);
+
+        var list = document.getElementById("listVid");
+        var numberOfVideos = parseInt(jsonData.TOTAL);
+        for (let i = 0; i < numberOfVideos; i++) {
+            const listItem = document.createElement('li');
+            const video = document.createElement('video');
+            const question = document.createElement('h3');
+            question.innerText = videosList[i].QUESTION;
+            list.appendChild(question);
+            video.src = "static/videos/" + videosList[i].FILENAME;
+            video.controls = true;
+            video.height = 240; // in px
+            video.width = 320; // in px
+            listItem.appendChild(video);
+            list.append(listItem);
+            list.append(document.createElement('br'));
+            list.append(document.createElement('br'));
+        }
+    </script>
+  </ul>
+
+
+      
+  </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForView</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/practicepage.css') }}"/>
+    <!-- Changes font of text in the navigation bar-->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">ForView</a>
+        <div class="navbar__toggle" id="mobile-menu"></div>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+        <li class="navbar__item">
+            <a href="/" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/practice" class="navbar__links">Practice</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/progress" class="navbar__links">Progress</a>
+        </li>
+        <!--
+        <li class="navbar__btn">
+            <a href="/signup" class="button">Sign Up</a>
+        </li> -->
+    </ul>
+  </nav>
+
+
+  <!--
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">AJOA</a>
+        <div class="navbar__toggle" id="mobile-menu"></div>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+          <a href="/" class="navbar__links">Home</a>
+      </li>
+      <li class="navbar__item">
+          <a href="/practice.html class="navbar__links">Practice</a>
+      </li>
+      <li class="navbar__item">
+          <a href="/progress.html" class="navbar__links">Progress</a>
+      </li>
+      <li class="navbar__btn">
+          <a href="/signup.html" class="button">Sign Up</a>
+      </li>
+  </ul>
+  </nav>
+-->
+
+<!-- Hero Section-->
+  <div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1 id = "quest">Question: {{ question }}</h1>
+            <!--
+            <h2>GROUP</h2>
+            <p>Enhance Your Interview Skills.</p> -->
+            <button class="main__btn" id = "record_button">Record</button>
+        </div>
+        
+        <video muted id = "video" autoplay></video>
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+        <div class="main__img--container">
+            <!--specifies location of the url-->
+           <!-- <img src="images/pic2.svg" alt="pic" id="main__"> -->
+        </div>
+    </div>
+  </div>
+
+  
+  <!--Serves as a services card
+   Services Section
+   Adds a section to the bottom of the page
+  <div class="services">
+    <h1>See what the hype is about</h1> 
+   <div class="services__container">
+    <div class="services__card">
+        <h2>Do you want to land the job of your dreams?</h2>
+         <p>AI Powered Technology</p> 
+        <button> Practice Now!</button>
+    </div>
+    <div class="services__card">
+        <h2>Put Your Skills to the Test</h2>
+        <p>Powered by AI Technology</p>
+        <button> Practice Now!</button>
+    </div>
+</div>
+</div> -->
+
+
+<!--Commented out
+    <div class="services__container">
+        <div class="services__card">
+            <h2>Improve your speaking...</h2>
+            <p>AI Powered Technology</p>
+            <button> Start Now!</button>
+        </div>
+        <div class="services__card">
+            <h2>Are you ready to prepare for the job of your dreams?</h2>
+            <p>Here's your chance/</p>
+            <button> Start Now!</button>
+        </div>
+    </div>
+  </div>
+-->
+<!-- Footer Section-->
+<div class="features">
+  <h1>How ForView can help YOU get invterviews!</h1>
+  <div class="features_container">
+    <div class="features_card">
+      <h3>Common Interview Questions</h3>
+      <p>With our bank of interview questions, you will be prepared to tackle any question that an employer throws at you!</p>
+    </div>
+    <div class="features_card">
+      <h3>Unlimited Attempts</h3>
+      <p>You will be tasked to repeat some of the questions so that you can fully master answering these questions.</p>
+    </div>
+    <div class="features_card">
+      <h3>Store and Revisit Past Questions</h3>
+      <p>With our powerful face detection and speech recognition algorithms, you will get an accurate analysis of what aspects of your interview skills need improvement on.</p>
+    </div>
+  </div>
+
+  <!-- Footer Section
+  <div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/">How does it work?</a>
+            <a href="/">Testimonials</a>
+          </div>   
+        </div> footerline wrapper
+      </div>
+    </div> -->
+  
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+
+

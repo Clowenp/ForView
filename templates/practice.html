@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Prep Site</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/styles.css') }}"/>
+    <!-- Changes font of text in the navigation bar-->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">ForView</a>
+        <div class="navbar__toggle" id="mobile-menu"></div>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+        <li class="navbar__item">
+            <a href="/" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/practice" class="navbar__links">Practice</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/progress" class="navbar__links">Progress</a>
+        </li>
+        <!--
+        <li class="navbar__btn">
+            <a href="/signup" class="button">Sign Up</a>
+        </li> -->
+    </ul>
+  </nav>
+
+
+<!-- Hero Section-->
+  <div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>Put your skills to the test</h1>
+            <!--
+            <h2>GROUP</h2>
+            <p>Enhance Your Interview Skills.</p> -->
+            <button class="main__btn"><a href="/practicePage">Click to Start</a></button>
+        </div>
+        <div class="main__img--container">
+            <!--specifies location of the url-->
+            <img src=" {{ url_for('static', filename='images/interview.png') }}" width = "750" alt="pic" id="main__">
+        </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <h1>How ForView can help YOU get invterviews!</h1>
+    <div class="features_container">
+      <div class="features_card">
+        <h3>Common Interview Questions</h3>
+        <p>With our bank of interview questions, you will be prepared to tackle any question that an employer throws at you!</p>
+      </div>
+      <div class="features_card">
+        <h3>Unlimited Attempts</h3>
+        <p>You will be tasked to repeat some of the questions so that you can fully master answering these questions.</p>
+      </div>
+      <div class="features_card">
+        <h3>Store and Revisit Past Questions</h3>
+        <p>With our powerful face detection and speech recognition algorithms, you will get an accurate analysis of what aspects of your interview skills need improvement on.</p>
+      </div>
+    </div>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>

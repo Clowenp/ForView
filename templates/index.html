@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForView</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/styles.css') }}"/>
+    <!-- Changes font of text in the navigation bar-->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">ForView</a>
+        <div class="navbar__toggle" id="mobile-menu"></div>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+        <li class="navbar__item">
+            <a href="/" class="navbar__links">Home</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/practice" class="navbar__links">Practice</a>
+        </li>
+        <li class="navbar__item">
+            <a href="/progress" class="navbar__links">Progress</a>
+        </li>
+        <!--
+        <li class="navbar__btn">
+            <a href="/signup.html" class="button">Sign Up</a>
+        </li> -->
+    </ul>
+  </nav>
+
+
+<!-- Hero Section-->
+  <div class="main">
+    <div class="main__container">
+        <div class="main__content">
+            <h1>FORVIEW</h1>
+            <p>Making getting your first job in canada easier! </p>
+            <button class="main__btn"><a href="/practice">Click to Start</a></button>
+        </div>
+        <div class="main__img--container">
+            <!--specifies location of the url-->
+            <img width = "750" src="{{ url_for('static', filename='images/pic2.svg') }}" alt="pic" id="main__">
+        </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <h1>What ForView has to offer:</h1>
+    <div class="features_container">
+      <div class="features_card">
+        <h3>Powerful AI Technology</h3>
+        <p>With our powerful face detection and speech recognition algorithms, you'll get an accurate analysis of what aspects of your interview skills need improvement on--all from the comfort of your home.</p>
+      </div>
+      <div class="features_card">
+        <h3>Flexible Translation Tools</h3>
+        <p>By being able to translate any question into any language that you're comfortable in, our application is accessible to users of all cultures.</p>
+      </div>
+      <div class="features_card">
+        <h3>Store and Revisit Past Questions</h3>
+        <p>With our powerful face detection and speech recognition algorithms, you'll get an accurate analysis of what aspects of your interview skills need improvement on.</p>
+      </div>
+    </div>
+      
+  </div>
+    <script src="app.js"></script>
+  </body>
+</html>
