@@ -9,9 +9,8 @@
     <!-- Changes font of text in the navigation bar-->
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
-
 <body>
+
   <nav class="navbar">
     <div class="navbar__container">
         <a href="/" id="navbar__logo">ForView</a>
@@ -31,97 +30,130 @@
             <a href="/progress" class="navbar__links">Progress</a>
         </li>
         <li class="navbar__btn">
-            <a href="/signup." class="button">Sign Up</a>
+            <a href="/signup" class="button">Sign Up</a>
         </li>
     </ul>
   </nav>
 
 
+  <!--
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="/" id="navbar__logo">AJOA</a>
+        <div class="navbar__toggle" id="mobile-menu"></div>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+          <a href="/" class="navbar__links">Home</a>
+      </li>
+      <li class="navbar__item">
+          <a href="/practice.html class="navbar__links">Practice</a>
+      </li>
+      <li class="navbar__item">
+          <a href="/progress.html" class="navbar__links">Progress</a>
+      </li>
+      <li class="navbar__btn">
+          <a href="/signup.html" class="button">Sign Up</a>
+      </li>
+  </ul>
+  </nav>
+-->
+
 <!-- Hero Section-->
   <div class="main">
-    <style>
-      .body {
-        background-color: black;
-      }
-      .main {
-        background-color: black;
-      }
-
-      .main_container {
-        background-color: #424242;
-        overflow:hidden;
-        width: 100%;
-      }
-
-      .question {
-        text-align: center;
-        font-size: 25px;
-        color: #dedcdc;
-      }
-
-      .practice_content video {
-        height: 150; 
-        width: 60%;
-        float: left;
-        margin-left: 10px;
-      }
-
-      .practice_content button  {
-        appearance: button;
-        backface-visibility: hidden;
-        background-color: #405cf5;
-        border-radius: 6px;
-        border-width: 0;
-        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
-        box-sizing: border-box;
-        color: #fff;
-        cursor: pointer;
-        font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
-        font-size: 100%;
-        height: 44px;
-        line-height: 1.15;
-        margin: 12px 0 0;
-        outline: none;
-        overflow: hidden;
-        padding: 0 25px;
-        position: relative;
-        text-align: center;
-        text-transform: none;
-        transform: translateZ(0);
-        transition: all .2s,box-shadow .08s ease-in;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-      }
-
-      .practice_content:buttondisabled {
-        cursor: default;
-      }
-
-      .practice_content:buttonfocus {
-        box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
-      }
-
-    </style>
-    <div class="main_container">
-        <div class="practice_content">
-            <div class ="question">
-              <br>
-              <h3>Question: {{ question }}</h3>
-            </div>
-            <br><br><br>
-            <video muted id = "video" autoplay></video>
-            <button id = "record_button">RECORD</button>
-            
-            <p id="timer">0 m 0 s</p>
-            <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <div class="main__container">
+        <div class="main__content">
+            <h1>Question: {{ question }}</h1>
+            <!--
+            <h2>GROUP</h2>
+            <p>Enhance Your Interview Skills.</p> -->
+            <button class="main__btn" id = "record_button">Record</button>
         </div>
+        
+        <video muted id = "video" autoplay></video>
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+        <div class="main__img--container">
+            <!--specifies location of the url-->
+           <!-- <img src="images/pic2.svg" alt="pic" id="main__"> -->
         </div>
     </div>
   </div>
 
-    
+  
+  <!--Serves as a services card
+   Services Section
+   Adds a section to the bottom of the page
+  <div class="services">
+    <h1>See what the hype is about</h1> 
+   <div class="services__container">
+    <div class="services__card">
+        <h2>Do you want to land the job of your dreams?</h2>
+         <p>AI Powered Technology</p> 
+        <button> Practice Now!</button>
+    </div>
+    <div class="services__card">
+        <h2>Put Your Skills to the Test</h2>
+        <p>Powered by AI Technology</p>
+        <button> Practice Now!</button>
+    </div>
+</div>
+</div> -->
+
+
+<!--Commented out
+    <div class="services__container">
+        <div class="services__card">
+            <h2>Improve your speaking...</h2>
+            <p>AI Powered Technology</p>
+            <button> Start Now!</button>
+        </div>
+        <div class="services__card">
+            <h2>Are you ready to prepare for the job of your dreams?</h2>
+            <p>Here's your chance/</p>
+            <button> Start Now!</button>
+        </div>
+    </div>
+  </div>
+-->
+<!-- Footer Section-->
+<div class="features">
+  <h1>How ForView can help YOU get invterviews!</h1>
+  <div class="features_container">
+    <div class="features_card">
+      <h3>Common Interview Questions</h3>
+      <p>With our bank of interview questions, you will be prepared to tackle any question that an employer throws at you!</p>
+    </div>
+    <div class="features_card">
+      <h3>Unlimited Attempts</h3>
+      <p>You will be tasked to repeat some of the questions so that you can fully master answering these questions.</p>
+    </div>
+    <div class="features_card">
+      <h3>Store and Revisit Past Questions</h3>
+      <p>With our powerful face detection and speech recognition algorithms, you will get an accurate analysis of what aspects of your interview skills need improvement on.</p>
+    </div>
+  </div>
+
+  <!-- Footer Section
+  <div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/">How does it work?</a>
+            <a href="/">Testimonials</a>
+          </div>   
+        </div> footerline wrapper
+      </div>
+    </div> -->
+  
 
     <script src="app.js"></script>
   </body>
 </html>
+
+
+
+
