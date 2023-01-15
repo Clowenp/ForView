@@ -87,6 +87,16 @@ def getUserData():
     return jsonify("File received and saved!")
 
 
+@app.route("/checkGrammar", methods = ['push'])
+def checkGrammar():
+
+    #ADD PYTHON CODE TO RUN
+
+    response = jsonify("File received and saved!")
+    response.headers.add('Access-Control-Allow-Origin', '*')
+
+    return response
+
 
 if __name__ == "__main__":  
     app.run(debug=True)
