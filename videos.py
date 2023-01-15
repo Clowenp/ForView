@@ -58,7 +58,6 @@ def readVideo(qID: int, firstName : str, lastName : str):
 
     return output
 
-
 def writeVideo(filename: str, qID: int, score: int, transcript: str, firstName : str, lastName : str):
     """
     Placeholder description
