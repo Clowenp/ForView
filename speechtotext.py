@@ -3,7 +3,6 @@ import speech_recognition as sr
 import ffmpeg
 
 from os import path
-
 from grammar import grammar_check
 
 def speech_to_text_func():

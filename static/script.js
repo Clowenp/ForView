@@ -9,12 +9,11 @@ function timer() {
 
 function getFileName() {
     const date = new Date();
-    return "1"
-            // (date.getMonth()+1).toString().padStart(2, 0) + "-" +
-            // date.getDate().toString().padStart(2, 0) + "-" +
-            // date.getHours().toString().padStart(2, 0) + "-" +
-            // date.getMinutes().toString().padStart(2, 0) + "-" +
-            // date.getSeconds().toString().padStart(2, 0);
+    return  (date.getMonth()+1).toString().padStart(2, 0) + "-" +
+            date.getDate().toString().padStart(2, 0) + "-" +
+            date.getHours().toString().padStart(2, 0) + "-" +
+            date.getMinutes().toString().padStart(2, 0) + "-" +
+            date.getSeconds().toString().padStart(2, 0);
 }
 
 
@@ -62,8 +61,7 @@ window.onload = function() {
 
                 var jsonTag = new Object();
                 jsonTag.FILENAME = filename;
-                jsonTag.ID = Math.floor(Math.random() * 100);
-                jsonTag.SCORE = Math.floor(Math.random() * 100);
+                jsonTag.QUESTION = document.getElementById("quest").innerText;
                 var stringJSON = JSON.stringify(jsonTag);
 
                 fetch('http://localhost:5000/update ', {

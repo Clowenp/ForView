@@ -28,6 +28,10 @@ def progress():
 def signup():
     return render_template("signup.html")
 
+@app.route("/videoList")
+def videoList():
+    return render_template("videoList.html")
+
 @app.route("/practicePage")
 def practicePage():
     info = readQuestion()
@@ -40,7 +44,7 @@ def recieve():
     file = files['file']
     filename = file.filename
 
-    with open(filename, 'wb') as f:
+    with open("static/videos/"+filename, 'wb') as f:
         f.write(file.read())
 
     response = jsonify("File received and saved!")
@@ -52,7 +56,7 @@ def recieve():
 def update():
     message = json.loads(request.data, strict=False)
 
-    file = 'userHistory.json'
+    file = 'static/videos/userHistory.json'
     listObj = []
 
     with open(file) as fp:
@@ -60,8 +64,7 @@ def update():
 
     listObj.append({
         "FILENAME": message['FILENAME'],
-        "ID": str(message['ID']),
-        "SCORE": str(message['SCORE'])
+        "QUESTION": str(message['QUESTION'])
     })
 
     with open(file, 'w') as json_file:

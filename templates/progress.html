@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ForView</title>
+    <title>ForView Interview Prep</title>
     <link rel="stylesheet" href=" {{ url_for('static', filename='css/styles.css') }}"/>
     <!-- Changes font of text in the navigation bar-->
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -28,10 +28,6 @@
         <li class="navbar__item">
             <a href="/progress" class="navbar__links">Progress</a>
         </li>
-        <!--
-        <li class="navbar__btn">
-            <a href="/signup" class="button">Sign Up</a>
-        </li> -->
     </ul>
   </nav>
 
@@ -40,22 +36,49 @@
   <div class="main">
     <div class="main__container">
         <div class="main__content">
-            <h1>Check your progress.</h1>
-            <!--
-            <h2>GROUP</h2>
-            <p>Enhance Your Interview Skills.</p> -->
-            <button class="main__btn"><a href="/">Click to Start</
-                a></button>
-        </div>
-
-        <div class="main__img--container">
-            <!--specifies location of the url
-            <img src="{{ url_for('static', filename='images/climb.png') }}" alt="pic" id="main__" height: "500px"> -->
+            <h1>VIEW VIDEOS</h1>
         </div>
     </div>
   </div>
 
+  <ul id="listVid">
+    <script>
+        var request = new XMLHttpRequest();
+        request.open("GET","static/userData.json", false);
+        request.send(null);
+        var jsonData = JSON.parse(request.responseText);
+
+        var request = new XMLHttpRequest();
+        request.open("GET", "static/videos/userHistory.json", false);
+        request.send(null);
+        var videosList = JSON.parse(request.responseText);
+        console.log(videosList[0].FILENAME);
+
+        console.log(jsonData);
+
+        var list = document.getElementById("listVid");
+        var numberOfVideos = parseInt(jsonData.TOTAL);
+        for (let i = 0; i < numberOfVideos; i++) {
+            const listItem = document.createElement('li');
+            const video = document.createElement('video');
+            const question = document.createElement('h3');
+            question.innerText = videosList[i].QUESTION;
+            list.appendChild(question);
+            video.src = "static/videos/" + videosList[i].FILENAME;
+            video.controls = true;
+            video.height = 240; // in px
+            video.width = 320; // in px
+            listItem.appendChild(video);
+            list.append(listItem);
+            list.append(document.createElement('br'));
+            list.append(document.createElement('br'));
+        }
+    </script>
+  </ul>
+
+
+      
+  </div>
     <script src="app.js"></script>
   </body>
 </html>
-
