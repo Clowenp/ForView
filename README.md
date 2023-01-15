@@ -1,3 +1,3 @@
 # For View
 
-This is our hackathon project.
+This is our hackathon project
