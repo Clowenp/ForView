@@ -114,7 +114,7 @@ def deleteVideo(qID : int, firstName : str, lastName : str):
     """
     firstName = firstName.title()
     lastName = lastName.title()    
-    database = readFile(f"data/{firstName}{lastName}")
+    database = readFile(f"data/{firstName}{lastName}/videos.json")
     videos = database["Entries"]
 
     try:
@@ -124,15 +124,16 @@ def deleteVideo(qID : int, firstName : str, lastName : str):
         print("Debug: no video to delete")
         pass
 
-    print("Delete video success")
-    return    
+    writeFile(database, f"data/{firstName}{lastName}/videos.json")
+    print("Delete video success")    
 
 
 def main():
     createVidDir("Hello", "wOrld")
-    writeVideo("video.wav", 1, 100, "California potato powers", "Hello", "World")
-    test = readVideo(1, "Hello", "World")
+    writeVideo("video.wav", 3, 100, "California potato powers", "Hello", "World")
+    test = readVideo(3, "Hello", "World")
     print(test)
+    deleteVideo(3, "Hello", "World")
 
 
 if __name__ == "__main__":
