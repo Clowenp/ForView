@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title>Recorder</title>
+    <style>
+        ul {
+            columns: 3;
+        }
+    </style>
+</head>
+<body>
+    <video muted id = "video" autoplay></video>
+    <button id = "record_button">RECORD</button>
+    <p id="timer">0 m 0 s</p>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <!-- <video width = "20%" height = "20%" src="{{ url_for('static', filename='videos/video.mp4') }}"></video> -->
+    
+    <ul id ="video_list">
+        <li><video width = "20%" height = "20%" src="{{ url_for('static', filename='videos/video.mp4') }}"></video></li>
+    </ul>
+</body>
