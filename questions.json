@@ -1,0 +1,122 @@
+{
+    "1": {
+        "content": "Tell me about yourself.",
+        "hasSeen": true
+    },
+    "2": {
+        "content": "What are your strengths?",
+        "hasSeen": true
+    },
+    "3": {
+        "content": "What are your weaknesses?",
+        "hasSeen": true
+    },
+    "4": {
+        "content": "Why do you want this job?",
+        "hasSeen": true
+    },
+    "5": {
+        "content": "Where would you like to be in your career five years from now?",
+        "hasSeen": true
+    },
+    "6": {
+        "content": "What's your ideal company?",
+        "hasSeen": true
+    },
+    "7": {
+        "content": "What attracted you to this company?",
+        "hasSeen": true
+    },
+    "8": {
+        "content": "Why should we hire you?",
+        "hasSeen": true
+    },
+    "9": {
+        "content": "What did you like least about your last job?",
+        "hasSeen": true
+    },
+    "10": {
+        "content": "When were you most satisfied in your job?",
+        "hasSeen": true
+    },
+    "11": {
+        "content": "What can you do for us that other candidates can't?",
+        "hasSeen": true
+    },
+    "12": {
+        "content": "What were the responsibilities of your last position?",
+        "hasSeen": true
+    },
+    "13": {
+        "content": "Why are you leaving your present job?",
+        "hasSeen": true
+    },
+    "14": {
+        "content": "What do you know about this industry?",
+        "hasSeen": false
+    },
+    "15": {
+        "content": "What do you know about our company?",
+        "hasSeen": false
+    },
+    "16": {
+        "content": "What was the most difficult period in your life, and how did you deal with it?",
+        "hasSeen": false
+    },
+    "17": {
+        "content": "If I were your supervisor and asked you to do something that you disagreed with, what would you do?",
+        "hasSeen": false
+    },
+    "18": {
+        "content": "Tell me about a time when you had to give someone difficult feedback. How did you handle it?",
+        "hasSeen": false
+    },
+    "19": {
+        "content": "What is your greatest failure, and what did you learn from it?",
+        "hasSeen": false
+    },
+    "20": {
+        "content": "How do you handle working with people who annoy you?",
+        "hasSeen": false
+    },
+    "21": {
+        "content": "Give me an example of a time you did something wrong. How did you handle it?",
+        "hasSeen": false
+    },
+    "22": {
+        "content": "Tell me about a time where you had to deal with conflict on the job.",
+        "hasSeen": false
+    },
+    "23": {
+        "content": "If you found out your company was doing something against the law, like fraud, what would you do?",
+        "hasSeen": false
+    },
+    "24": {
+        "content": "What's the most difficult decision you've made in the last two years and how did you come to that decision?",
+        "hasSeen": false
+    },
+    "25": {
+        "content": "Can you describe an instance where your supervisor or manager just gave you too much work with not enough time? What did you do?",
+        "hasSeen": false
+    },
+    "26": {
+        "content": "What would you do if you misunderstood an important task on the job? Give me an example.",
+        "hasSeen": false
+    },
+    "27": {
+        "content": "Can you tell me about a time you gave a presentation that was particularly successful? Why do you think it went well?",
+        "hasSeen": false
+    },
+    "28": {
+        "content": "What would you do if your team member refuses to, or just can't complete their part of the work? Give me an example.",
+        "hasSeen": false
+    },
+    "29": {
+        "content": "Is there a time that comes to mind where you wish you had handled a situation with a client or colleague differently?",
+        "hasSeen": false
+    },
+    "30": {
+        "content": "Can you give me an example of when you had to adapt to a new and sudden change in the workplace?",
+        "hasSeen": false
+    }
+}
