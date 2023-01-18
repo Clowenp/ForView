@@ -6,7 +6,7 @@ finished, the app runs the program through a grammar checker API (GrammarBot) an
 
 Submission for Deltahacks 9 (2022).
 
-Created by [Aaron Jumarang](https://github.com/aaronjuma), [Owen Pan](https://github.com/Clowenp), [Jessica](https://github.com/ojaura), and [Alex Chen](https://github.com/alexchen2)
+Created by [Aaron Jumarang](https://github.com/aaronjuma), [Owen Pan](https://github.com/Clowenp), [Jessica Idahosa](https://github.com/ojaura), and [Alex Chen](https://github.com/alexchen2)
 
 ## List of Features:
 - Randomly reads and loads a question from a database of interview questions
