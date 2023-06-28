@@ -21,7 +21,7 @@ Created by [Aaron Jumarang](https://github.com/aaronjuma), [Owen Pan](https://gi
 - [ ] Detection of fluctuations in voice within newly-converted .wav file
 - [ ] Implementation of more languages to translate text
 
-## Required Dependancies/Packages:
+## Required Dependencies/Packages:
 For Python:
   1. ```speech_recognition```
   2. ```translate```
